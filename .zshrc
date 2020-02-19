@@ -67,7 +67,7 @@ POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(virtualenv context dir newline vcs)
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git python virtualenv aws brew docker gem git-extras osx pip sublime autoupdate fast-syntax-highlighting zsh-iterm-touchbar yarn yarn-completion shrink-path
+  git python virtualenv aws brew docker gem git-extras osx pip sublime autoupdate fast-syntax-highlighting zsh-iterm-touchbar yarn yarn-completion shrink-path tmux
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -100,6 +100,9 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+ZSH_TMUX_ITERM2=true
+
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/timotraulsen/projects/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/timotraulsen/projects/google-cloud-sdk/path.zsh.inc'; fi
