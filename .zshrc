@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$PATH:$HOME/.bin
 
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/timotraulsen/.oh-my-zsh
@@ -67,7 +67,7 @@ POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(virtualenv context dir newline vcs)
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git python virtualenv aws brew docker gem git-extras osx pip sublime autoupdate fast-syntax-highlighting zsh-iterm-touchbar yarn yarn-completion
+  git python virtualenv aws brew docker gem git-extras osx pip sublime autoupdate fast-syntax-highlighting zsh-iterm-touchbar yarn yarn-completion shrink-path
 )
 
 source $ZSH/oh-my-zsh.sh

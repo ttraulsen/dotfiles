@@ -188,7 +188,9 @@ prompt_hg() {
 
 # Dir: current working directory
 prompt_dir() {
-  prompt_segment blue black '%~'
+  setopt prompt_subst
+  prompt_segment blue black $(shrink_path -f)
+  # prompt_segment blue black '%~'
 }
 
 # Virtualenv: current working virtualenv
