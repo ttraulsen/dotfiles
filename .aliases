@@ -4,3 +4,4 @@ alias docker_clean_ps='docker rm $(docker ps --filter=status=exited --filter=sta
 alias tma='tmux attach'
 alias cat=ccat
 alias less=cless
+alias pyv='source venv/bin/activate'
