@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$PATH:$HOME/.bin
+export PATH=/usr/local/opt/ruby/bin:$HOME/bin:/usr/local/bin:$PATH:$HOME/.bin
 
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/timotraulsen/.oh-my-zsh
@@ -117,3 +117,4 @@ fi
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 source /Users/timotraulsen/Library/Preferences/org.dystroy.broot/launcher/bash/br
+ . /usr/local/etc/profile.d/z.sh
