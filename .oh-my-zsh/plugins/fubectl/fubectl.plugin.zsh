@@ -1,0 +1,1 @@
+/Users/timotraulsen/projects/private/fubectl/fubectl.plugin.zsh

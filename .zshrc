@@ -1,8 +1,11 @@
+# Fig pre block. Keep at the top of this file.
+[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
 # If you come from bash you might have to change your $PATH.
-export PATH=/usr/local/opt/ruby/bin:$HOME/bin:/usr/local/bin:$PATH:$HOME/.bin
+export PATH=/opt/homebrew/bin:/usr/local/opt/ruby/bin:$HOME/bin:/usr/local/bin:$PATH:$HOME/.bin
 
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/timotraulsen/.oh-my-zsh
+export NODE_EXTRA_CA_CERTS=~/projects/bahnid/bahnid-development/local-setup/mkcert/fullchain.pem
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -10,7 +13,7 @@ export ZSH=/Users/timotraulsen/.oh-my-zsh
 #ZSH_THEME="robbyrussell"
 #ZSH_THEME="kolo"
 #ZSH_THEME="agnoster"
-ZSH_THEME="batmenk"
+#ZSH_THEME="batmenk"
 #ZSH_THEME="operator"
 #ZSH_THEME="powerlevel9k/powerlevel9k"
 
@@ -67,7 +70,7 @@ POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(virtualenv context dir newline vcs)
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git python virtualenv aws brew docker gem git-extras osx pip sublime autoupdate fast-syntax-highlighting zsh-iterm-touchbar yarn yarn-completion shrink-path tmux thefuck colorize
+  git python virtualenv aws brew docker gem git-extras macos pip sublime autoupdate zsh-iterm-touchbar yarn yarn-completion shrink-path tmux thefuck colorize fubectl
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -116,5 +119,32 @@ fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-source /Users/timotraulsen/Library/Preferences/org.dystroy.broot/launcher/bash/br
- . /usr/local/etc/profile.d/z.sh
+# source /Users/timotraulsen/Library/Preferences/org.dystroy.broot/launcher/bash/br
+# . /usr/local/etc/profile.d/z.sh
+
+export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
+export GUILE_LOAD_PATH="/usr/local/share/guile/site/3.0"
+export GUILE_LOAD_COMPILED_PATH="/usr/local/lib/guile/3.0/site-ccache"
+export GUILE_SYSTEM_EXTENSIONS_PATH="/usr/local/lib/guile/3.0/extensions"
+export EDITOR="code -w"
+
+eval "$(starship init zsh)"
+
+eval "$(fnm env --use-on-cd)"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+export KICS_QUERIES_PATH=/usr/local/opt/kics/share/kics/assets/queries
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/Users/timotraulsen/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+
+# Fig post block. Keep at the bottom of this file.
+[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"

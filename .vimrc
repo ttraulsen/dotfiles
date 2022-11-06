@@ -15,11 +15,14 @@ Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-easytags'
+Plugin 'xolox/vim-shell'
 Plugin 'majutsushi/tagbar'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
 Plugin 'Raimondi/delimitMate'
 Plugin 'godlygeek/tabular'
+Plugin 'lervag/vimtex'
+
 
 " " The following are examples of different formats supported.
 " " Keep Plugin commands between vundle#begin/end.
@@ -92,17 +95,14 @@ nmap <C-T> <C-T> :NERDTreeTabsToggle<CR>
 let g:nerdtree_tabs_open_on_console_startup = 1
 
 set tags=./tags;,~/.vimtags
-let g:easytags_events = ['BufReadPost', 'BufWritePost']
-let g:easytags_async = 1
-let g:easytags_dynamic_files = 2
-let g:easytags_resolve_links = 1
-let g:easytags_suppress_ctags_warnings = 1
+" let g:easytags_events = ['BufReadPost', 'BufWritePost']
+" let g:easytags_async = 1
+" let g:easytags_dynamic_files = 2
+" let g:easytags_resolve_links = 1
+" let g:easytags_suppress_ctags_warnings = 1
 
 let g:airline#extensions#hunks#non_zero_only = 1
 
-let delimitMate_expand_cr = 1
 augroup mydelimitMate
    au!
-   au FileType markdown let b:delimitMate_nesting_quotes = ["'"]
-   au FileType python let b:delimitMate_nesting_quotes = ['"', "'"]
 augroup END

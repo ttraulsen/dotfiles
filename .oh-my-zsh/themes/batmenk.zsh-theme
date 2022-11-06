@@ -201,6 +201,10 @@ prompt_virtualenv() {
   fi
 }
 
+prompt_kube_context() {
+  prompt_segment blue black $(kubectl config current-context)
+}
+
 # Status:
 # - was there an error
 # - am I root
@@ -220,6 +224,7 @@ build_prompt() {
   RETVAL=$?
   prompt_status
   prompt_virtualenv
+  prompt_kube_context
   prompt_context
   prompt_dir
   prompt_git
