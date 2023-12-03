@@ -132,8 +132,6 @@ eval "$(starship init zsh)"
 
 eval "$(fnm env --use-on-cd)"
 
-eval "$(mani completion zsh)"
-
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
@@ -147,15 +145,6 @@ export NVM_DIR="$HOME/.nvm"
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 export PATH="/Users/timotraulsen/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
-
-# pnpm
-export PNPM_HOME="/Users/timotraulsen/Library/pnpm"
-export PATH="$PNPM_HOME:$PATH"
-# pnpm end
-
-export RH_SSO_ROOT="/Users/timotraulsen/projects/idm/rh_sso"
-export KEYCLOAK_HOME="/Users/timotraulsen/projects/idm/rh_sso/devhome/opt/keycloak/18.0.2" # Needs to be checked and corrected
-export PATH="$PATH":"/Users/timotraulsen/projects/idm/rh_sso/devhome/bin"
 
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
