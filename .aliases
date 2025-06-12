@@ -1,4 +1,4 @@
-alias ls='exa --icons'
+alias ls='lsd'
 alias docker_clean_images='docker rmi $(docker images -a --filter=dangling=true -q)'
 alias docker_clean_ps='docker rm $(docker ps --filter=status=exited --filter=status=created -q)'
 alias tma='tmux attach'
@@ -9,3 +9,6 @@ alias threagile="docker run --rm -it -v $(pwd)/:/app/work threagile/threagile"
 alias top=bpytop
 alias jest='npx jest'
 alias gita="python3 -m gita"
+alias zb='zellij --layout ~/.zellij/bahnid.kdl'
+alias za='zellij a'
+alias vi=nvim

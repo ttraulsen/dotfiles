@@ -1,5 +1,5 @@
-# Fig pre block. Keep at the top of this file.
-[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
+# CodeWhisperer pre block. Keep at the top of this file.
+[[ -f "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.pre.zsh"
 # If you come from bash you might have to change your $PATH.
 export PATH=/opt/homebrew/bin:/usr/local/opt/ruby/bin:$HOME/bin:/usr/local/bin:$PATH:$HOME/.bin
 
@@ -144,10 +144,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
 [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
-### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
-export PATH="/Users/timotraulsen/.rd/bin:$PATH"
-### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
-
 # pnpm
 export PNPM_HOME="/Users/timotraulsen/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
@@ -157,5 +153,12 @@ export RH_SSO_ROOT="/Users/timotraulsen/projects/idm/rh_sso"
 export KEYCLOAK_HOME="/Users/timotraulsen/projects/idm/rh_sso/devhome/opt/keycloak/18.0.2" # Needs to be checked and corrected
 export PATH="$PATH":"/Users/timotraulsen/projects/idm/rh_sso/devhome/bin"
 
-# Fig post block. Keep at the bottom of this file.
-[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
+# Add WebStorm CLI to path
+export PATH="$PATH":/Users/timotraulsen/Applications/WebStorm.app/Contents/MacOS
+
+
+[[ -f "$HOME/fig-export/dotfiles/dotfile.zsh" ]] && builtin source "$HOME/fig-export/dotfiles/dotfile.zsh"
+
+# CodeWhisperer post block. Keep at the bottom of this file.
+[[ -f "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.post.zsh"
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
