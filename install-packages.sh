@@ -169,7 +169,29 @@ install_ubuntu() {
 main() {
     # Get the directory of this script
     SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-    PACKAGES_FILE="$SCRIPT_DIR/packages"
+    
+    print_info "Detecting system..."
+    SYSTEM=$(detect_system)
+    
+    # Determine packages file based on system
+    case "$SYSTEM" in
+        macos)
+            PACKAGES_FILE="$SCRIPT_DIR/packages-brew"
+            print_success "Detected: macOS (Homebrew)"
+            ;;
+        arch)
+            PACKAGES_FILE="$SCRIPT_DIR/packages-arch"
+            print_success "Detected: Arch Linux (pacman)"
+            ;;
+        ubuntu)
+            PACKAGES_FILE="$SCRIPT_DIR/packages-ubuntu"
+            print_success "Detected: Ubuntu/Debian (apt)"
+            ;;
+        unknown)
+            print_error "Unable to detect system type"
+            exit 1
+            ;;
+    esac
     
     # Check if packages file exists
     if [[ ! -f "$PACKAGES_FILE" ]]; then
@@ -177,28 +199,19 @@ main() {
         exit 1
     fi
     
-    print_info "Detecting system..."
-    SYSTEM=$(detect_system)
-    
+    # Install packages based on system
     case "$SYSTEM" in
         macos)
-            print_success "Detected: macOS (Homebrew)"
             check_package_manager "macos"
             install_macos
             ;;
         arch)
-            print_success "Detected: Arch Linux (pacman)"
             check_package_manager "arch"
             install_arch
             ;;
         ubuntu)
-            print_success "Detected: Ubuntu/Debian (apt)"
             check_package_manager "ubuntu"
             install_ubuntu
-            ;;
-        unknown)
-            print_error "Unable to detect system type"
-            exit 1
             ;;
     esac
     
