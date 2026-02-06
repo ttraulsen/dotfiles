@@ -12,3 +12,4 @@ alias gita="python3 -m gita"
 alias zb='zellij --layout ~/.zellij/bahnid.kdl'
 alias za='zellij a'
 alias vi=nvim
+alias dotenv='export $(egrep -v "^#" .env | xargs)'

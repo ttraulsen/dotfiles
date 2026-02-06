@@ -70,7 +70,7 @@ POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(virtualenv context dir newline vcs)
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git python virtualenv aws brew docker gem git-extras macos pip sublime autoupdate zsh-iterm-touchbar yarn yarn-completion shrink-path tmux thefuck colorize fubectl
+  aliases helm iterm2 kubectl git python virtualenv aws brew docker gem git-extras macos pip sublime yarn shrink-path tmux thefuck colorize 
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -122,11 +122,11 @@ fi
 # source /Users/timotraulsen/Library/Preferences/org.dystroy.broot/launcher/bash/br
 # . /usr/local/etc/profile.d/z.sh
 
-export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
+export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@3)"
 export GUILE_LOAD_PATH="/usr/local/share/guile/site/3.0"
 export GUILE_LOAD_COMPILED_PATH="/usr/local/lib/guile/3.0/site-ccache"
 export GUILE_SYSTEM_EXTENSIONS_PATH="/usr/local/lib/guile/3.0/extensions"
-export EDITOR="code -w"
+export EDITOR="vi"
 
 eval "$(starship init zsh)"
 
@@ -162,3 +162,7 @@ export PATH="$PATH":/Users/timotraulsen/Applications/WebStorm.app/Contents/MacOS
 # CodeWhisperer post block. Keep at the bottom of this file.
 [[ -f "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.post.zsh"
 export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+export PATH="$HOME/go/bin":$PATH
+
+export PATH="$HOME/.local/bin":$PATH
+source <(zeit completion $(basename "$SHELL"))
