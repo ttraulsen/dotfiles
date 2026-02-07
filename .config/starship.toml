@@ -312,4 +312,4 @@ ssh_only = false
 format = '[ $ssh_symbol]($style)[on $hostname ]($style)'
 disabled = false
 style = "bg:red fg:crust"
-aliases = { "bwpm-KXMWXCPXVX" = "work" }
+aliases = { "bwpm-KXMWXCPXVX" = "work", "Mac" = "StarryNight" }
