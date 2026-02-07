@@ -33,7 +33,7 @@ DOTFILES=(
     "$SCRIPT_DIR/.config/starship.toml:$HOME/.config/starship.toml"
     "$SCRIPT_DIR/.config/nvim:$HOME/.config/nvim"
     "$SCRIPT_DIR/.config/raycast:$HOME/.config/raycast"
-    "$SCRIPT_DIR/.oh-my-zsh:$HOME/.oh-my-zsh"
+    "$SCRIPT_DIR/bat:$(bat --config-dir)"
 )
 
 # Create symbolic links for all dotfiles
