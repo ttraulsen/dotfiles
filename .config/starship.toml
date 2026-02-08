@@ -161,7 +161,6 @@ format = '[[  $time ](fg:crust bg:lavender)]($style)'
 full_symbol = '🔋'
 charging_symbol = '⚡️'
 discharging_symbol = '🫗'
-style = 'fg:crust bg:mauve'
 format = '[$symbol$percentage ]($style)'
 
 [[battery.display]]

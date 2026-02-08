@@ -1,5 +1,3 @@
-# CodeWhisperer pre block. Keep at the top of this file.
-[[ -f "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.pre.zsh"
 # If you come from bash you might have to change your $PATH.
 export PATH=/opt/homebrew/bin:/usr/local/opt/ruby/bin:$HOME/bin:/usr/local/bin:$PATH:$HOME/.bin
 
@@ -159,10 +157,8 @@ export PATH="$PATH":/Users/timotraulsen/Applications/WebStorm.app/Contents/MacOS
 
 [[ -f "$HOME/fig-export/dotfiles/dotfile.zsh" ]] && builtin source "$HOME/fig-export/dotfiles/dotfile.zsh"
 
-# CodeWhisperer post block. Keep at the bottom of this file.
-[[ -f "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.post.zsh"
 export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 export PATH="$HOME/go/bin":$PATH
 
 export PATH="$HOME/.local/bin":$PATH
-source <(zeit completion $(basename "$SHELL"))
+command -v zeit &> /dev/null && source <(zeit completion $(basename "$SHELL"))
