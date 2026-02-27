@@ -315,7 +315,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
       }
     }
   }
-`;var bZ=require("react");var _Z=require("react/jsx-runtime");var pd=require("@raycast/api");var RD=require("react/jsx-runtime");var q3=require("@raycast/api"),PD=require("react");var DD=require("react/jsx-runtime");var ND=require("react/jsx-runtime");var ID=require("react/jsx-runtime");var Rm=require("@raycast/api");var AZ=require("react/jsx-runtime");var V3=require("@raycast/api"),LZ=require("react/jsx-runtime");var jZ=Oe(ym()),LD=require("react/jsx-runtime");var kD=require("react/jsx-runtime");var MD=Oe(Oc());var U3=require("react/jsx-runtime");var Fde=xD.gql`
+`;var bZ=require("react");var _Z=require("react/jsx-runtime");var pd=require("@raycast/api");var RD=require("react/jsx-runtime");var q3=require("@raycast/api"),PD=require("react");var DD=require("react/jsx-runtime");var ND=require("react/jsx-runtime");var ID=require("react/jsx-runtime");var Rm=require("@raycast/api");var AZ=require("react/jsx-runtime");var V3=require("@raycast/api"),LZ=require("react/jsx-runtime");var jZ=Oe(ym()),LD=require("react/jsx-runtime");var kD=require("react/jsx-runtime");var MD=Oe(Oc());var U3=require("react/jsx-runtime");var qde=xD.gql`
   query GetMRDetail($id: MergeRequestID!) {
     mergeRequest(id: $id) {
       description

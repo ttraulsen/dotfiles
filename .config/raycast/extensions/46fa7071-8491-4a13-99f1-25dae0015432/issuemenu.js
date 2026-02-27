@@ -292,7 +292,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
       }
     }
   }
-`;var os=require("@raycast/api");var TD=require("react");var SD=De(hu());var $p=require("@raycast/api"),YH=De(require("react"));var wP=require("react/jsx-runtime");var ED=De(wD());var j3=require("react/jsx-runtime");var Gle=SD.gql`
+`;var os=require("@raycast/api");var TD=require("react");var SD=De(hu());var $p=require("@raycast/api"),YH=De(require("react"));var wP=require("react/jsx-runtime");var ED=De(wD());var j3=require("react/jsx-runtime");var Kle=SD.gql`
   query GetMRDetail($id: MergeRequestID!) {
     mergeRequest(id: $id) {
       description
@@ -301,7 +301,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
       }
     }
   }
-`;var pd=require("@raycast/api"),PD=require("react");var RD=De(hu());var ld=require("@raycast/api"),hZ=De(require("react"));var OD=require("react/jsx-runtime");var vZ=De(Uf());var DD=require("react/jsx-runtime"),ipe=RD.gql`
+`;var pd=require("@raycast/api"),PD=require("react");var RD=De(hu());var ld=require("@raycast/api"),hZ=De(require("react"));var OD=require("react/jsx-runtime");var vZ=De(Uf());var DD=require("react/jsx-runtime"),ope=RD.gql`
   query GetProjectPipeplines($fullPath: ID!) {
     project(fullPath: $fullPath) {
       pipelines {

@@ -124,7 +124,7 @@ export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@3)"
 export GUILE_LOAD_PATH="/usr/local/share/guile/site/3.0"
 export GUILE_LOAD_COMPILED_PATH="/usr/local/lib/guile/3.0/site-ccache"
 export GUILE_SYSTEM_EXTENSIONS_PATH="/usr/local/lib/guile/3.0/extensions"
-export EDITOR="vi"
+export EDITOR="nvim"
 
 eval "$(starship init zsh)"
 
@@ -162,3 +162,4 @@ export PATH="$HOME/go/bin":$PATH
 
 export PATH="$HOME/.local/bin":$PATH
 command -v zeit &> /dev/null && source <(zeit completion $(basename "$SHELL"))
+eval "$(mise activate zsh)"

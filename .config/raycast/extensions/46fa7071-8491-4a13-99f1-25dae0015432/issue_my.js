@@ -310,7 +310,7 @@ ${t.description}`),(0,Ln.jsx)(ir.Detail,{markdown:r})}function KH(e){let t=e.lab
       }
     }
   }
-`;var hs=require("@raycast/api");var $R=require("react");var WR=Ee(zo());var ed=require("@raycast/api"),DY=Ee(require("react"));var zP=require("react/jsx-runtime");var HR=Ee(zR());var a5=require("react/jsx-runtime");var dpe=WR.gql`
+`;var hs=require("@raycast/api");var $R=require("react");var WR=Ee(zo());var ed=require("@raycast/api"),DY=Ee(require("react"));var zP=require("react/jsx-runtime");var HR=Ee(zR());var a5=require("react/jsx-runtime");var cpe=WR.gql`
   query GetMRDetail($id: MergeRequestID!) {
     mergeRequest(id: $id) {
       description
@@ -319,7 +319,7 @@ ${t.description}`),(0,Ln.jsx)(ir.Detail,{markdown:r})}function KH(e){let t=e.lab
       }
     }
   }
-`;var gd=require("@raycast/api"),JR=require("react");var XR=Ee(zo());var vd=require("@raycast/api"),zZ=Ee(require("react"));var YR=require("react/jsx-runtime");var $Z=Ee(am());var ZR=require("react/jsx-runtime"),Ppe=XR.gql`
+`;var gd=require("@raycast/api"),JR=require("react");var XR=Ee(zo());var vd=require("@raycast/api"),zZ=Ee(require("react"));var YR=require("react/jsx-runtime");var $Z=Ee(am());var ZR=require("react/jsx-runtime"),Dpe=XR.gql`
   query GetProjectPipeplines($fullPath: ID!) {
     project(fullPath: $fullPath) {
       pipelines {
