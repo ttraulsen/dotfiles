@@ -39,7 +39,7 @@
 #max_concurrency = 5
 # Additional git repositories to pull
 repos = [
-	"~/projects/bahnid/*/",
+	"~/projects/private/*/",
 #    "~/src/*/",
 #    "~/.config/something"
 ]
@@ -58,7 +58,8 @@ arguments = "--rebase --autostash"
 #"Emacs Snapshot" = "rm -rf ~/.emacs.d/elpa.bak && cp -rl ~/.emacs.d/elpa ~/.emacs.d/elpa.bak"
 
 # Custom commands
-#[commands]
+[commands]
+"Mise" = "mise self-update;mise plugins update"
 #"Python Environment" = "~/dev/.env/bin/pip install -i https://pypi.python.org/simple -U --upgrade-strategy eager jupyter"
 
 #[brew]
